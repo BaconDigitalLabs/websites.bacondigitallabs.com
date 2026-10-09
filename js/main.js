@@ -46,7 +46,7 @@ if (contactForm) {
 
       contactForm.hidden = true;
       status.classList.add("is-success");
-      status.textContent = `Thanks, ${name} — your request is in. We'll be in touch to set up your 15-minute call.`;
+      status.textContent = `Thanks, ${name} — we've got your message and will be in touch soon.`;
       status.focus();
     } catch {
       const link = document.createElement("a");
