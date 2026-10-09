@@ -222,7 +222,33 @@
       <h2 class="section-kicker">Start with a quick look at what you have</h2>
       <p class="section-lede">In 15 minutes, we'll look at your domain, current site (if any), and hosting, and tell you honestly whether you need a new build, a DNS/hosting cleanup, or both.</p>
       <div class="contact-card">
-        <a class="btn btn-primary btn-lg" href="mailto:hello@bacondigitallabs.com?subject=Website%20Launch%20%26%20Care%20inquiry">Email hello@bacondigitallabs.com</a>
+        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" data-service="Website Launch &amp; Care">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="Website Launch &amp; Care inquiry">
+          <input type="hidden" name="from_name" value="Bacon Digital Labs website">
+          <input type="hidden" name="service" value="Website Launch &amp; Care">
+          <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-field form-field-full">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="cf-phone">Phone</label>
+            <input id="cf-phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9\s\+\-\.\(\)]{7,}" title="Enter a phone number, e.g. 360-555-0123">
+          </div>
+          <div class="form-field form-field-full">
+            <label for="cf-message">Services you need</label>
+            <textarea id="cf-message" name="message" rows="5" required placeholder="e.g. A new 5-page site for a landscaping business. The domain is already registered."></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary btn-lg" type="submit">Request a 15-minute call</button>
+          </div>
+        </form>
+        <p class="form-status" id="contactStatus" role="status" aria-live="polite" tabindex="-1"></p>
         <p class="contact-note">We typically reply within one business day.</p>
       </div>
     </div>
